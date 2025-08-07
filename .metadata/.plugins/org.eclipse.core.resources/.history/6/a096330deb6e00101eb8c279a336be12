@@ -1,0 +1,20 @@
+package com.project.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.project.service.CunsumerService;
+
+@RestController
+public class CunsumerController {
+	
+	@Autowired
+	CunsumerService cunsumerService;
+	
+	
+	@PostMapping("/get/info")
+	public String getInformation() {
+		return cunsumerService.getInformation();
+	}
+}

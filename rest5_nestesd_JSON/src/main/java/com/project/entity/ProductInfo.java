@@ -1,0 +1,43 @@
+package com.project.entity;
+
+import java.util.List;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Entity
+@Table(name = "Amazon_ProductInfo")
+public class ProductInfo {
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int pId;
+	
+	private int pProductId;
+	private String pName;
+	private double pPrice;
+	private int pQuantity;
+	private List<String> pSpecification;
+	
+	
+	
+	public ProductInfo(int pProductId, String pName, double pPrice, int pQuantity, List<String> pSpecification) {
+		super();
+		this.pProductId = pProductId;
+		this.pName = pName;
+		this.pPrice = pPrice;
+		this.pQuantity = pQuantity;
+		this.pSpecification = pSpecification;
+	}
+	
+	
+}

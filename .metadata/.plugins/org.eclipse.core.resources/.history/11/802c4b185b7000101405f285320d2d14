@@ -1,0 +1,14 @@
+package com.project.response;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@AllArgsConstructor
+@NoArgsConstructor
+@Data
+public class PaymentDetailsResponse {
+	private double pPaidAmount;
+	private String pStatus;
+	private String pBankTransaction;
+}

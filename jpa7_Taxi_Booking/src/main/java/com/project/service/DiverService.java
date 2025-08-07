@@ -1,0 +1,30 @@
+package com.project.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.project.dto.request.DriverRequest;
+import com.project.dto.response.DriverResponse;
+import com.project.entity.Driver;
+import com.project.repository.DriverRepository;
+import com.project.transformer.DriverTransformer;
+
+@Service
+public class DiverService {
+	@Autowired
+	DriverRepository driverRepository;
+
+	public DriverResponse addDriver(DriverRequest driverRequest) {
+		//DTO to Entity
+		Driver driver = DriverTransformer.driverRequestToDriver(driverRequest);
+		// save
+		Driver save = driverRepository.save(driver);
+		
+		// Entity to DTO
+		DriverResponse driverResponse = DriverTransformer.driverToDriverResponse(save);
+		return driverResponse;
+		
+	}
+
+	
+}

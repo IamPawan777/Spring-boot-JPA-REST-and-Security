@@ -1,0 +1,11 @@
+spring.application.name=rest8_accept_XML_formate
+
+
+server.servlet.context-path = /FakeStore
+#server.port = 9090
+
+spring.datasource.url=jdbc:mysql://localhost:3306/springboot_rest
+spring.datasource.username=root
+spring.datasource.password=IamPawan
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true

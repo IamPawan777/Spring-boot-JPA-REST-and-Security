@@ -1,0 +1,31 @@
+package com.project.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.project.request.OrderDetailsRequest;
+import com.project.response.OrderDetailsResponse;
+import com.project.service.OrderService;
+
+@RestController
+public class OrderController {
+	
+	@Autowired
+	private OrderService orderService;
+	
+	@PostMapping(path = "/create/order")
+	public String createOrder(@RequestBody OrderDetailsRequest orderDetails) {
+		String result =  orderService.createOrder(orderDetails);
+		return result;
+	}
+	
+	@GetMapping("/get/order")
+	public List<OrderDetailsResponse> getAllOrder(){
+		return orderService.getAllOrder();
+	}
+}

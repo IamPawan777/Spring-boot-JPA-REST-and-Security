@@ -1,0 +1,65 @@
+package com.project.service;
+
+import java.util.*;
+import java.util.List;
+
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpMethod;
+import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
+
+import com.project.dto.ProductCard;
+import com.project.dto.ProductInfo;
+import com.project.dto.ProductResponce;
+
+@Service
+public class CunsumerService {
+
+	public ProductResponce createInformation() {
+		
+		String url = "https://fakestoreapi.com/products";
+		
+		ProductInfo productRequest = new ProductInfo();
+		productRequest.setTitle("Pat Stuff");
+		productRequest.setPrice(12.22f);
+		productRequest.setCategory("Animal calatogies items");
+		productRequest.setDescription("At the minimum price you can by best products.");
+		productRequest.setImage("https://www.image.com");
+		
+		HttpEntity<ProductInfo> httpEntity = new HttpEntity<ProductInfo>(productRequest); 
+		
+		
+		RestTemplate restTemplate = new RestTemplate();
+		ResponseEntity<ProductResponce> exchange = restTemplate.exchange(url, HttpMethod.POST, httpEntity, ProductResponce.class);
+		
+		ProductResponce productResponce = exchange.getBody();
+		System.out.println(productResponce);
+		return productResponce;
+		
+		
+	}
+
+	public List<ProductInfo> getInformation() {
+		String url = "https://fakestoreapi.com/products";
+		
+		RestTemplate restTemplate = new RestTemplate();
+		ResponseEntity<List> exchange = restTemplate.exchange(url, HttpMethod.GET, null, List.class);
+
+		List body = exchange.getBody();		
+		return body;
+	}
+	
+	
+	public ProductInfo  getCardById(int pId) {
+		String url = "https://fakestoreapi.com/products/{id}";
+		
+		RestTemplate restTemplate = new RestTemplate();
+		Map<String, String> map = new HashMap<>();
+		return restTemplate.exchange(url, HttpMethod.GET, null, ProductInfo.class, pId).getBody();
+
+//		List<String> body = responseEntity.getBody();
+//		return body;	
+	}
+
+}

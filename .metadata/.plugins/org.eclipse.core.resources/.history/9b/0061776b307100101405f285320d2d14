@@ -1,0 +1,28 @@
+package com.project.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.project.service.UserPaymentService;
+
+@RestController
+public class UserPaymentController {
+
+	@Autowired
+	UserPaymentService userPaymentService;
+	
+	@GetMapping("/user/payment/option")
+	public List<String> allpaymentOption(){
+		System.out.println("In User payment controller: Counsumer application..");
+		return userPaymentService.getPaymentOption();
+//		return null;
+	}
+	
+	@GetMapping("call/net/banking")
+	public String doNetbankinng() {
+		return userPaymentService.doNetBanking();
+	}
+}

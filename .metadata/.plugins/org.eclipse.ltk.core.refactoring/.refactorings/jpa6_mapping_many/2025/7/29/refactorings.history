@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename package &apos;com.project.onetomany.entity&apos; to &apos;com.project.entity&apos;&#x0D;&#x0A;- Original project: &apos;jpa6_mapping_many&apos;&#x0D;&#x0A;- Original element: &apos;jpa6_mapping_many/src/main/java/com.project.onetomany.entity&apos;&#x0D;&#x0A;- Renamed element: &apos;jpa6_mapping_many/src/main/java/com.project.entity&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;com.project.onetomany.entity&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.project.onetomany.entity" name="com.project.entity" qualified="false" references="true" stamp="1752558527376" textual="false" version="1.0"/>
+</session>

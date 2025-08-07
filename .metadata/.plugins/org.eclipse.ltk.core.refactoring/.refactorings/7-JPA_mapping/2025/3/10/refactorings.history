@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.project.repository.Catagory&apos; to &apos;CatagoryDao&apos;&#x0D;&#x0A;- Original project: &apos;7-JPA_mapping&apos;&#x0D;&#x0A;- Original element: &apos;com.project.repository.Catagory&apos;&#x0D;&#x0A;- Renamed element: &apos;com.project.repository.CatagoryDao&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Catagory&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.project.repository{Catagory.java[Catagory" matchStrategy="1" name="CatagoryDao" qualified="false" references="true" similarDeclarations="false" stamp="1740953638312" textual="false" version="1.0"/>
+</session>

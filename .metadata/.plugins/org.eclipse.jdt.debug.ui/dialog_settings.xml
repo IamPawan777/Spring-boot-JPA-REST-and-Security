@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.jdt.debug.ui.MAIN_METHOD_SELECTION_DIALOG">
+		<item key="ShowStatusLine" value="true"/>
+		<item key="History" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0D;&#x0A;&lt;History&gt;&#x0D;&#x0A;&lt;historyRootNode&gt;&#x0D;&#x0A;&lt;infoNode&gt;=2-springCore_config/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&amp;lt;com.example.project{Application.java[Application&lt;/infoNode&gt;&#x0D;&#x0A;&lt;infoNode&gt;=x_demo/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&amp;lt;com.project{XDemoApplication.java[XDemoApplication&lt;/infoNode&gt;&#x0D;&#x0A;&lt;/historyRootNode&gt;&#x0D;&#x0A;&lt;/History&gt;"/>
+		<section name="DialogBoundsSettings">
+			<item key="DIALOG_HEIGHT" value="500"/>
+			<item key="DIALOG_WIDTH" value="600"/>
+			<item key="DIALOG_X_ORIGIN" value="669"/>
+			<item key="DIALOG_Y_ORIGIN" value="191"/>
+			<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
+		</section>
+	</section>
+	<section name="expressionHistory">
+		<item key="expressionHistoryEntry_0" value="[1]"/>
+		<item key="expressionHistoryEntryCount" value="3"/>
+		<item key="expressionHistoryEntry_1" value="[2]"/>
+		<item key="expressionHistoryEntry_2" value="org.springframework.context.annotation.AnnotationConfigApplicationContext@17cf187, started on Sat Jul 12 20:47:30 IST 2025"/>
+	</section>
+</section>

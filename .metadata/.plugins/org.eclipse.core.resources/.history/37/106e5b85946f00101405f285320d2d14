@@ -1,0 +1,23 @@
+package com.project.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.project.dto.Product;
+
+@Service
+public class ProductService {
+
+//	@Autowired
+	
+	
+	public String addProduct(Product product) {
+		
+		int value = 0;
+		double price = product.getPrice()/0;
+		System.out.println("price is : "+price);
+		return "added successfully" ;
+		
+	}
+	
+}

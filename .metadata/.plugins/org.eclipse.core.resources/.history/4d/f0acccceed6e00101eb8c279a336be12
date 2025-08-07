@@ -1,0 +1,24 @@
+package com.project.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.project.dto.ProductResponce;
+import com.project.service.CunsumerService;
+
+@RestController
+@RequestMapping("/product")
+public class CunsumerController {
+	
+	@Autowired
+	CunsumerService cunsumerService;
+	
+	
+	@PostMapping("/get/info")
+	public ProductResponce getInformation() {
+		System.out.println("Consumer...");
+		return cunsumerService.getInformation();
+	}
+}

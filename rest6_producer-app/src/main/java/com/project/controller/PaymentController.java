@@ -1,0 +1,41 @@
+package com.project.controller;
+
+import java.math.BigInteger;
+import java.security.SecureRandom;
+import java.util.List;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.project.dto.CreaditCardInformation;
+import com.project.dto.NetBankingInformation;
+
+@RestController
+public class PaymentController {
+	
+	@PostMapping("payment/netbanking")
+	public String netBankingPayment(@RequestBody NetBankingInformation netBankingInformation) {
+		
+		return "Payment Success...ID is: " + generateTransactionId();
+	}
+
+	@PostMapping("payment/credit/card")
+	public String creditCartPayment(@RequestBody CreaditCardInformation netBankingInformation) {
+		
+		return "Payment Success...ID is: " + generateTransactionId();
+	}
+	
+	@GetMapping("/payment/options")
+	public List<String> getPaymentType(){
+		return List.of("1. Net Banking",   "2. Credit Card", "3. Debit Card", "4. UPI");
+	}
+	
+	
+	public static String generateTransactionId() {
+		SecureRandom random = new SecureRandom();
+		return new BigInteger(130, random).toString(32).toUpperCase();
+	}
+	
+}

@@ -1,0 +1,37 @@
+package com.project.service;
+
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpMethod;
+import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
+
+import com.project.dto.ProductRequest;
+
+@Service
+public class CunsumerService {
+
+	public ProductResponce getInformation() {
+		
+		String url = "https://fakestoreapi.com/products";
+		
+		ProductRequest productRequest = new ProductRequest();
+		productRequest.setTitle("Pat Stuff");
+		productRequest.setPrice(12.22f);
+		productRequest.setCategory("Animal calatogies items");
+		productRequest.setDescription("At the minimum price you can by best products.");
+		productRequest.setImage("https://www.image.com");
+		
+		HttpEntity<ProductRequest> httpEntity = new HttpEntity<ProductRequest>(productRequest); 
+		
+		
+		RestTemplate restTemplate = new RestTemplate();
+		ResponseEntity<ProductResponce> exchange = restTemplate.exchange(url, HttpMethod.POST, httpEntity, ProductResponce.class);
+		
+		String body = exchange.getBody();
+		return body;
+		
+		
+	}
+	
+}
