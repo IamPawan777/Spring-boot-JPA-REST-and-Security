@@ -1,7 +1,21 @@
 
-# 🚗Texi Booking
+# 🚗 QuickTrip
 
-A backend system similar to Uber/Ola 🚕 enabling cab bookings 📳, customer account management, and driver operations 🚔, with an admin panel for overseeing all users and cabs. Secured with JWT-based authentication 🔐 and role-based access control (RBAC), the project was built with Spring Boot and exposes 15+ REST APIs for all operations. It leverages Spring Data JPA for database interactions with MySQL ♻ and integrates Spring Mail 📩 to automatically send booking confirmation emails to customers. The entire API suite is thoroughly documented with Swagger 📰 for seamless testing and integration.
+A QuickTrip backend system similar to Uber/Ola 🚕 enabling cab bookings 📳, customer account management, and driver operations 🚔, with an admin panel for overseeing all users and cabs. Secured with JWT-based authentication 🔐 and role-based access control (RBAC), the project was built with Spring Boot and exposes 15+ REST APIs for all operations. It leverages Spring Data JPA for database interactions with MySQL ♻ and integrates Spring Mail 📩 to automatically send booking confirmation emails to customers. The entire API suite is thoroughly documented with Swagger 📰 for seamless testing and integration.
+
+# ⚛ Layered Architecture
+
+Layered architecture is a design pattern where the application is divided into logical layers, and each layer has a specific responsibility. Each layer communicates only with the layer below it, not directly with other layers. The project follows layered architecture. The Controller layer handles HTTP requests, the Service layer contains business logic, and the Repository layer interacts with the database. Each layer has a single responsibility, which improves maintainability and scalability.”
+
+![alt text](image-6.png)
+
+# 💹 Entity Relationship
+
+Project designed the database using an Entity Relationship model. Customer, Driver, Cab, and Booking are the core entities. A customer can have multiple bookings, each booking is associated with one driver and one cab, and a driver is linked to a single cab. Relationships are implemented using JPA annotations like @OneToMany and @ManyToOne.
+
+![alt text](image-1.png)
+
+
 ## 💥 All Documented API's
 
 #### 🔐 Login API 
@@ -78,7 +92,15 @@ A backend system similar to Uber/Ola 🚕 enabling cab bookings 📳, customer a
 
 The most important model for securing the project is ***Spring Security***. Only Spring Security is not enough, so implement with ***JWT (JSON Web Token).***
 
-**Authentication flow:**
+***Authentication***
+
+![alt text](image-2.png)
+
+***Authorization***
+
+![alt text](image-3.png)
+
+**Authentication flow for different roles:**
 
 ![App Screenshot](https://github.com/user-attachments/assets/27573c54-cd4e-478e-801f-46f5d4430a93)
 
@@ -89,7 +111,7 @@ The most important model for securing the project is ***Spring Security***. Only
 
 **Description of the project:**
 
-![App Screenshot](https://github.com/user-attachments/assets/fe5bedab-1171-4c1a-a455-5e825889bb3a)
+![alt text](image-4.png)
 
 
 **All APIs:**
